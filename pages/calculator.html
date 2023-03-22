@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Travis "Calculator" Scott</title>
+    <style>
+      /* Basic styling for calculator */
+      
+      #calculator {
+        padding: 10px;
+        width: 20%;
+        height: 100%;
+        border: 1px  solid black;
+        margin: 20px auto;
+        text-align: center;
+        background-color: lightpink;
+        border-radius: 7%;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px;
+        background-color: #580c0c8f
+      }
+      
+      input {
+      width: 200px;
+      height: 40px;
+      font-size: 40px;
+      margin: 10px;
+      text-align: right;
+      padding-right: 10px;
+      background-color: beige;
+      }
+      
+      body{
+        background-color: #5a3434;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"><h1>ABEL</h1></a>
+      <nav >
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                          <li><a href="ordinary.html">The Ordinary</a></li>
+              <li><a href="#">Brand 2</a></li>
+              <li><a href="#">Brand 3</a></li>
+            </ul>
+          </li>				  
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="../index.html#contact">Contact Us</a></li>
+          <li><a href="signin.html">Sign in</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    
+    <div id="calculator">
+      <input type="text" id="display" readonly /><br />
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendSymbol('%')">%</button>
+      <button onclick="appendSymbol('/')">/</button>
+      <button onclick="appendSymbol('*')">*</button><br />
+      <button onclick="appendSymbol('7')">7</button>
+      <button onclick="appendSymbol('8')">8</button>
+      <button onclick="appendSymbol('9')">9</button>
+      <button onclick="appendSymbol('-')">-</button><br />
+      <button onclick="appendSymbol('4')">4</button>
+      <button onclick="appendSymbol('5')">5</button>
+      <button onclick="appendSymbol('6')">6</button>
+      <button onclick="appendSymbol('+')">+</button><br />
+      <button onclick="appendSymbol('1')">1</button>
+      <button onclick="appendSymbol('2')">2</button>
+      <button onclick="appendSymbol('3')">3</button>
+      <button onclick="calculate()">=</button><br />
+      <button onclick="appendSymbol('0')">0</button>
+      <button onclick="appendSymbol('.')">.</button>
+    </div>
+    <script>
+      let display = document.getElementById("display");
+      let currentCalculation = "";
+
+      // Append symbols to current calculation
+      function appendSymbol(symbol) {
+        currentCalculation += symbol;
+        display.value = currentCalculation;
+      }
+
+      // Clear display and current calculation
+      function clearDisplay() {
+        display.value = "";
+        currentCalculation = "";
+      }
+
+      // Evaluate current calculation and display result
+      function calculate() {
+        try {
+          display.value = eval(currentCalculation);
+          currentCalculation = "";
+        } catch (error) {
+          display.value = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>

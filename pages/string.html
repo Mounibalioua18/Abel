@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css"> 
+    <title>string</title>
+</head>
+<body>
+    <header>
+		<a href="../index.html"><h1>ABEL</h1></a>
+		<nav >
+			<ul>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Brands <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+                        <li><a href="ordinary.html">The Ordinary</a></li>
+					  <li><a href="#">Brand 2</a></li>
+					  <li><a href="#">Brand 3</a></li>
+					</ul>
+				</li>				  
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="index.html#contact">Contact Us</a></li>
+				<li><a href="signin.html">Sign in</a></li>
+			</ul>
+		</nav>
+	</header>
+    
+    <section>
+    <script>
+      function displayLength() {
+      // get the user input
+      let userInput = document.getElementById("userInput").value;
+      // get the length of the string
+      let strLength = userInput.length; 
+      // display the length in the HTML element with id "lengthDisplay"
+      document.getElementById("lengthDisplay").innerHTML = "The length of the string is: " + strLength;
+    }
+    </script>
+
+    <label for="userInput" style="padding: 10px; font-size: 20px;">Enter something here:</label>
+    <input type="text" id="userInput" style="margin: 10px; font-size: 20px;">
+    <button onclick="displayLength()" style="font-size: 20px;">Display Length</button>
+    <output id="lengthDisplay" style="font-size: ;20px">
+    
+    </section>
+
+    <section>
+      <script>
+        function vowels(){
+          
+        }
+      </script> 
+
+    </section>
+
+
+
+</body>
+</html>
